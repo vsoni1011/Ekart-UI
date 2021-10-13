@@ -1,0 +1,32 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .625rem 0;
+  font-size: .875rem;
+  background-color: rgb(55, 63, 80);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255,255,255,.65);
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 0;
+  text-decoration: none !important;
+  color: rgba(255,255,255,.65);
+}
+
+.support {
+  .text {
+    margin-right: .25rem !important;
+  }
+}
+
+.carousel {
+  position: relative;
+}
