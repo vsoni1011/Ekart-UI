@@ -20,6 +20,11 @@
     margin-bottom: 0;
     text-decoration: none !important;
     color: rgba(255, 255, 255, 0.65);
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: white;
+    }
   }
 
   i {
