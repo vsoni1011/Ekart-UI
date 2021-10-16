@@ -1,8 +1,10 @@
+@import "../../variables.scss";
+
 .header {
     background-color: #f6f9fc;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     padding-top: 0.5rem;
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
 
     .nav-link {
         display: block;
@@ -10,31 +12,31 @@
         background: none;
         border: 1px solid transparent;
         font-weight: 500;
-        padding: .75rem 1.25rem;
-        color: #4b566b;
+        padding: 0.75rem 1.25rem;
+        color: $primary-grey;
+
+        i {
+            margin-right: 0.5rem;
+        }
     }
 
     .active {
-        color: #fe696a;
-    }
+        color: $primary-red;
 
-    .active::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: calc(100% - (1.2rem * 2));
-        height: 2px;
-        background-color: #fe696a;
-        left: 1.3rem;
-        bottom: 0;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% - (1.2rem * 2));
+            height: 2px;
+            background-color: $primary-red;
+            left: 1.3rem;
+            bottom: 0;
+        }
     }
 
     a {
         text-decoration: none;
-    }
-
-    i {
-        margin-right: 0.5rem;
     }
 }
 
@@ -45,8 +47,8 @@
 .login-btn {
     display: block;
     width: 100%;
-    background-color: #fe696a;
-    border-color: #fe696a;
+    background-color: $primary-red;
+    border-color: $primary-red;
     color: white;
     box-shadow: 0 0.5rem 1.125rem -0.5rem rgb(254 105 106 / 90%);
 }
@@ -58,7 +60,7 @@
     margin-bottom: 1rem;
 
     &-forgot {
-        color: #fe696a;
+        color: $primary-red;
         font-size: 0.875rem;
         text-decoration: none;
     }

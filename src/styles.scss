@@ -1,27 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+@import "./variables.scss";
 
 /* Global form style */
 .form {
+    &-control {
+        margin-bottom: 1.2rem;
+        font-size: 0.9rem;
+
+        &::placeholder {
+            color: $primary-grey-light;
+        }
+    }
+
     &-group {
         padding: 0.5rem 0;
     }
 
-    &-control {
-        margin-bottom: 1.2rem;
+    &-checkbox {
+        margin-right: 0.5rem;
     }
 
     &-label {
         font-size: 0.875rem;
         font-weight: 500;
-        color: #373f50;
-    }
-
-    &-checkbox {
-        margin-right: 0.5rem;
+        color: $primary-grey-dark;
     }
 }
 
