@@ -2,3 +2,30 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import '~bootstrap/scss/bootstrap';
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+/* Global form style */
+.form {
+    &-group {
+        padding: 0.5rem 0;
+    }
+
+    &-control {
+        margin-bottom: 1.2rem;
+    }
+
+    &-label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #373f50;
+    }
+
+    &-checkbox {
+        margin-right: 0.5rem;
+    }
+}
+
+/* Global tag style */
+a {
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'login',
@@ -7,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() {
-   }
+  invalidLogin: boolean = false;
 
-  ngOnInit(): void {
+  constructor(public activeModal: NgbActiveModal) { }
+
+  ngOnInit() {
+  }
+
+  onSignIn(data: any) {
+
+  }
+
+  onSignUp(data: any) {
+
   }
 
 }

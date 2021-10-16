@@ -1,0 +1,54 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs header">
+  <li ngbNavItem>
+    <a ngbNavLink class="nav-link">
+      <i class="bi bi-lock"></i>
+      Sign in
+    </a>
+    <ng-template ngbNavContent>
+      <form #signIn="ngForm" (ngSubmit)="onSignIn(signIn.value)">
+        <div *ngIf="invalidLogin" class="alert alert-danger"> Invalid username or password</div>
+        <label class="form-label" for="email">Email</label>
+        <input type="text" id="email" class="form-control" name="email" ngModel placeholder="Email Address" required
+          autofocus>
+
+        <label class="form-label" for="pwd">Password</label>
+        <input type="password" id="pwd" class="form-control" name="password" ngModel placeholder="Password" required>
+
+        <div class="pwd">
+          <div class="pwd-remember">
+            <input id="remember" type="checkbox" class="form-checkbox">
+            <label class="form-label" for="remember">Remember me</label>
+          </div>
+          <a class="pwd-forgot" href="#">Forgot password?</a>
+        </div>
+
+        <button class="btn btn-primary login-btn">Sign in</button>
+      </form>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink class="nav-link">
+      <i class="bi bi-person"></i>
+      Sign up
+    </a>
+    <ng-template ngbNavContent>
+      <form #signUp="ngForm" (ngSubmit)="onSignUp(signUp.value)">
+        <label class="form-label" for="name">Name</label>
+        <input type="text" id="name" class="form-control" name="name" ngModel placeholder="Name" required autofocus>
+
+        <label class="form-label" for="email">Email</label>
+        <input type="text" id="email" class="form-control" name="email" ngModel placeholder="Email Address" required>
+
+        <label class="form-label" for="pwd">Password</label>
+        <input type="password" id="pwd" class="form-control" name="password" ngModel required>
+
+        <label class="form-label" for="confmpwd">Confirm password</label>
+        <input type="password" id="confmpwd" class="form-control" name="confPassword" ngModel required>
+
+        <button class="btn btn-primary login-btn">Sign up</button>
+      </form>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="body"></div>
