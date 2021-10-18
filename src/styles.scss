@@ -5,6 +5,13 @@
 
 @import "./variables.scss";
 
+body {
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: normal; //400
+  line-height: 1.5;
+}
+
 /* Global form style */
 .form {
     &-control {
