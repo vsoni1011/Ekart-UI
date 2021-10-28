@@ -12,7 +12,6 @@ import { TopbarComponent } from './header/topbar/topbar.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { RatingComponent } from './catalog/product/rating/rating.component';
 import { ProductComponent } from './catalog/product/product.component';
 import { CatalogService } from './catalog/catalog.service';
 
@@ -25,7 +24,6 @@ import { CatalogService } from './catalog/catalog.service';
     NavbarComponent,
     LoginComponent,
     CatalogComponent,
-    RatingComponent,
     ProductComponent
   ],
   imports: [
