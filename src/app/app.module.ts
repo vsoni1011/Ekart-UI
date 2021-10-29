@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,7 +13,11 @@ import { NavbarComponent } from './header/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ProductCardComponent } from './catalog/productCard/productCard.component';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ProductManagementComponent } from './admin/product-management/product-management.component';
+
 import { CatalogService } from './catalog/catalog.service';
+import { AdminService } from './admin/admin.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { CatalogService } from './catalog/catalog.service';
     NavbarComponent,
     LoginComponent,
     CatalogComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductManagementComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,8 @@ import { CatalogService } from './catalog/catalog.service';
     FormsModule
   ],
   providers: [
-    CatalogService
+    CatalogService,
+    AdminService
   ],
   bootstrap: [AppComponent]
 })

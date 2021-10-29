@@ -10,7 +10,7 @@ import { ProductCard } from '../catalog.model';
 })
 export class ProductCardComponent implements OnInit {
 
-  @Input() dataSource: ProductCard = { id: 0, name: '', price: 0, discount: 0, image: '', rating: 0 };
+  @Input() dataSource: ProductCard = { id: 0, name: '', price: 0, discount: 0, thumbnailImage: '', rating: 0 };
 
   constructor(config: NgbRatingConfig) {
     // customize default values of ratings used by this component tree

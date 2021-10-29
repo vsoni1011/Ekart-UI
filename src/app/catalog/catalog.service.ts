@@ -17,14 +17,14 @@ export class CatalogService {
     // return this.http.get<Product[]>(productUrl);
     return of([
 
-      { id: 0, name: 'Item 000', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
-      { id: 1, name: 'Item 001', image: 'assets/02.jpg', price: 10.5, discount: 0, rating: 3 },
-      { id: 2, name: 'Item 000', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
-      { id: 3, name: 'Item 001', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
-      { id: 4, name: 'Item 000', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
-      { id: 5, name: 'Item 001', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
-      { id: 6, name: 'Item 000', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
-      { id: 7, name: 'Item 001', image: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 0, name: 'Item 000', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 1, name: 'Item 001', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 0, rating: 3 },
+      { id: 2, name: 'Item 000', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 3, name: 'Item 001', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 4, name: 'Item 000', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 5, name: 'Item 001', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 6, name: 'Item 000', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
+      { id: 7, name: 'Item 001', thumbnailImage: 'assets/02.jpg', price: 10.5, discount: 5, rating: 3 },
 
     ]);
   }
