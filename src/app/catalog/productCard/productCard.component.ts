@@ -1,16 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
-import { Product } from '../catalog.model';
+import { ProductCard } from '../catalog.model';
 
 @Component({
-  selector: 'product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+  selector: 'productCard',
+  templateUrl: './productCard.component.html',
+  styleUrls: ['./productCard.component.scss'],
   providers: [NgbRatingConfig]
 })
-export class ProductComponent implements OnInit {
+export class ProductCardComponent implements OnInit {
 
-  @Input() dataSource: Product = { id: 0, name: '', price: 0, discount: 0, image: '', rating: 0 };
+  @Input() dataSource: ProductCard = { id: 0, name: '', price: 0, discount: 0, image: '', rating: 0 };
 
   constructor(config: NgbRatingConfig) {
     // customize default values of ratings used by this component tree

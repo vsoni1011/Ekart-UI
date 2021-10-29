@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Product } from './catalog.model';
+import { ProductCard } from './catalog.model';
 
 const productUrl = `${environment.apiUrl}/products`;
 
@@ -13,7 +13,7 @@ export class CatalogService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<Product[]> {
+  getProducts(): Observable<ProductCard[]> {
     // return this.http.get<Product[]>(productUrl);
     return of([
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogService } from './catalog.service';
-import { Product } from './catalog.model';
+import { ProductCard } from './catalog.model';
 
 @Component({
   selector: 'catalog',
@@ -8,7 +8,7 @@ import { Product } from './catalog.model';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent implements OnInit {
-  public productCards: Product[] = [];
+  public productCards: ProductCard[] = [];
   constructor(private _catalogService: CatalogService) {
 
   }

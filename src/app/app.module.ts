@@ -12,7 +12,7 @@ import { TopbarComponent } from './header/topbar/topbar.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { ProductComponent } from './catalog/product/product.component';
+import { ProductCardComponent } from './catalog/productCard/productCard.component';
 import { CatalogService } from './catalog/catalog.service';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { CatalogService } from './catalog/catalog.service';
     NavbarComponent,
     LoginComponent,
     CatalogComponent,
-    ProductComponent
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
