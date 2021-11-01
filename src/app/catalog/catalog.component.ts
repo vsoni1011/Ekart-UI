@@ -18,4 +18,7 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  trackById(index: number, data: any) {
+    return data.id
+  }
 }
