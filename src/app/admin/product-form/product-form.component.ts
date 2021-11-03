@@ -11,5 +11,7 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onAdd(data: any) {
+    console.log(data)
+  }
 }
