@@ -1,0 +1,6 @@
+<section class="col-lg-8">
+  <div class="row mx-n2">
+    <productCard [dataSource]="data" *ngFor="let data of productCards| async;" class="col-md-3 col-sm-5 px-2 mb-4">
+    </productCard>
+  </div>
+</section>

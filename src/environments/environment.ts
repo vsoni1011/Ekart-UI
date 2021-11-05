@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://10.118.189.121:8080/api/v1', // Docker URL
 };
 
 /*

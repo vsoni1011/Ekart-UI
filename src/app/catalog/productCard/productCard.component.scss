@@ -1,0 +1,136 @@
+@import "../../../variables.scss";
+
+.product-card {
+    padding-bottom: 1.25rem;
+    border: 0;
+    transition: all 0.15s ease-in-out;
+    .badge {
+        right: auto;
+        left: 0.75rem;
+    }
+    .sale {
+        right: auto !important;
+    }
+    .bg-danger.badge-shadow {
+        box-shadow: 0 0.5rem 1.125rem -0.275rem $primary-red;
+    }
+    .bg-danger {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+    }
+    .product-card-actions,
+    > .btn-wishlist,
+    .badge {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        z-index: 5;
+    }
+    .btn-wishlist.btn-sm,
+    .btn-group-sm > .btn-wishlist.btn {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .btn-wishlist {
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0 !important;
+        transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+            box-shadow 0.2s ease-in-out;
+        border: 0;
+        border-radius: 50%;
+        background-color: $wishlist-background;
+        color: $primary-grey-dark;
+        text-align: center;
+        &:hover {
+            color: $primary-red;
+        }
+    }
+    .card-body {
+        position: relative;
+        background-color: $white;
+        z-index: 2;
+    }
+    .card-body-hidden {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        margin-top: -1.25rem;
+        transition: opacity visibility 0.15s ease-in-out;
+        border-radius: 0.4375rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: $white;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+    }
+    &:hover {
+        border-color: $white;
+        box-shadow: 0 0.3rem 1.525rem -0.375rem $primary-grey-light;
+        z-index: 10;
+
+        .card-body-hidden {
+            opacity: 1;
+            visibility: visible;
+            box-shadow: 0 0.3rem 1.525rem -0.375rem $primary-grey-light;
+        }
+    }
+    .star {
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+        color: $rating-star-empty;
+        margin-top: -0.75rem;
+    }
+    .full {
+        color: $rating-star-fill;
+    }
+    .half {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color: $rating-star-fill;
+    }
+    a {
+        color: $primary-red;
+        text-decoration: none;
+    }
+    .product-title > a {
+        transition: color 0.25s ease-in-out;
+        color: $primary-grey-dark;
+        text-decoration: none !important;
+        &:hover {
+            color: $primary-red;
+        }
+    }
+
+    .fs-sm {
+        font-size: 0.875rem !important;
+    }
+
+    img,
+    figure {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    .quick-view > a {
+        transition: color 0.25s ease-in-out;
+        color: $primary-grey;
+        text-decoration: none !important;
+        &:hover {
+            color: $primary-red;
+        }
+    }
+
+    .text-accent {
+        color: $price-color !important;
+    }
+    .text-muted {
+        color: $primary-grey-light !important;
+    }
+}
