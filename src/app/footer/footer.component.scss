@@ -5,14 +5,9 @@
     display: block;
 }
 
-.pt-5 {
+.pt-3 {
     padding-top: 3rem !important;
 }  
-
-.col-md-4 {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-}
 
 .widget-title {
     margin-bottom: 1.125rem;
@@ -48,18 +43,18 @@
 
 .widget{
     color: #f7f9fd;
-    margin: 0px 0px 24px;
-    padding: 0px 0px 8px;
+    margin: 0rem 0rem 24rem;
+    padding: 0rem 0rem 8rem;
     list-style: none;
     .widget-links{
         display: inline-block;
     }
 }   
 .pb-2 {
-   padding-bottom: 0.5rem !important;
+   padding-bottom: 0.5rem;
 }
-.mb-4 {
-   margin-bottom: 1.5rem !important;
+.mb-6 {
+   margin-bottom: 1.5rem;
 }
 
 [role=button] {
@@ -77,15 +72,15 @@
 // Footer Back-ground colors
 
 .bg-footer {
-    background-color: $footer-colour;
+    background-color: $footer-color;
 }
 
 .bg-footer-lighter{ 
-    background-color: lighten($footer-colour, 25%);
+    background-color: lighten($footer-color, 25%);
 }
 
 .bg-footer-slighter{
-    background-color: lighten($footer-colour, 20%);
+    background-color: lighten($footer-color, 20%);
 }
 
 // Footer - Icons at bottom
@@ -94,11 +89,11 @@
     color: #fe696a !important;
 }
 
-.ps-3 {
+.ps-1 {
     padding-left: 1rem !important;
 }
 
-.pb-3 {
+.pb-1 {
     padding-bottom: 1rem !important;
 }
 
@@ -107,25 +102,26 @@
 }
 
 .d-flex {
-    display: flex !important;
+    display: flex;
     align-items: center;
+    font-size: 2.40rem;
 }
 
 .fs-base {
-    font-size: 1rem !important;
+    font-size: 1rem;
     font-weight: bold;
     display: block;
 
     .text-light {
-        color: #fff !important;
+        color: #fff;
     }
     .mb-1 {
-        margin-bottom: 0.25rem !important;
+        margin-bottom: 0.25rem;
     }
 }
 
 .fs-ms {
-    font-size: 0.8125rem !important;
+    font-size: 0.8125rem;
     white-space: nowrap;
 }
 
@@ -141,7 +137,7 @@
     padding-left: 2.8125rem;
     border-radius: 0.375rem;
     background-position: center left 0.75rem;
-    background-color: #2b3445;
+    background-color: $background-color;
     background-size: 1.5rem 1.5rem;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -159,14 +155,6 @@
     }
 }
 
-// seperation line at footer
-.hr-light {
-    color: rgba(255,255,255,.12);
-    .mb-5 {
-        margin-bottom: 3rem !important;
-    }
-}
-
 // Cartzilla footer logo
 .row {
     --bs-gutter-x: 1.875rem;
@@ -178,22 +166,22 @@
     margin-left: calc(var(--bs-gutter-x) * -.5);
 }
 
-@media (min-width: 768px)
+@media (min-width: 768rem)
 { text-md-start {
     text-align: left !important;
   }
 }
 
 .d-inline-block {
-    display: inline-block !important;
+    display: inline-block;
     .align-middle {
-        vertical-align: middle !important;
+        vertical-align: middle;
     }
     .mt-n1 {
-        margin-top: -0.25rem !important;
+        margin-top: -0.25rem;
     }
     .me-3 {
-        margin-right: 1rem !important;
+        margin-right: 1rem;
     }
 }
 
