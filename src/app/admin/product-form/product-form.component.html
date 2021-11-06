@@ -49,7 +49,7 @@
           <div *ngIf ="[colors]" class='two-elements'>
             <label class="after-element" for="color">Color</label>
             <select name="color" id="color" class="form-control color-select box" required ngModel>
-              <option *ngFor="let color of colors" value="{{color}}" [ngStyle]="{'background-color':color}">&nbsp;&nbsp;</option>
+              <option *ngFor="let color of colors" value="{{color}}" [ngStyle]="{'background-color':color}">{{color}}</option>
             </select>
           </div>
           <div class='two-elements'>
