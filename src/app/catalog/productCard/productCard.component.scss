@@ -133,4 +133,10 @@
     .text-muted {
         color: $primary-grey-light !important;
     }
+    .thumbnail-image {
+        align-items: center;
+        img {
+            padding: 1rem;
+        }
+    }
 }

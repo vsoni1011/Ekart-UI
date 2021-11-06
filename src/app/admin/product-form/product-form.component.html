@@ -1,37 +1,81 @@
-<ul ngbNav #nav="ngbNav" class="header">
+<ul ngbNav #productForm="ngbNav" class="form-modal">
   <li ngbNavItem>
-    <div class="nav-link">
+    <div class="modal-header">
       Add Product
     </div>
     <ng-template ngbNavContent>
       <form #addProduct="ngForm" (ngSubmit)="onAdd(addProduct.value)">
-        <label for="pname">Product Name</label>
-        <input type="text" class="form-control" id="pname" name="productname" placeholder="Product name.." required
-          ngModel autofocus>
-        <div class="items">
-          <label for="price">Price(₹)</label>
-          <input type="number" id="price" name="price" placeholder="Price.." class="form-control" ngModel required>
-          <label class="label-2" for="discount">Discount(%)</label>
-          <input type="number" id="discount" name="discount" placeholder="Discount.." class="form-control" ngModel
-            required>
+        <div class='two-elements'>
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required
+            ngModel autofocus>
         </div>
-        <label for="description">Description</label>
-        <textarea type="text" id="description" name="description" placeholder="Description.." class="form-control"
-          ngModel required></textarea>
-        <div class="items">
-          <label for="color">Color</label>
-          <input class="color-selector" type="color" id="color" name="color" class="form-control"
-            ngModel required>
-          <label class="label-2" for="size">Size</label>
-          <input type="number" id="size" name="size" placeholder="Size.." class="form-control" ngModel required>
+        <div class='two-elements'>
+          <label for="description">Description</label>
+          <textarea type="text" id="description" name="description" class="form-control"
+            ngModel required></textarea>
         </div>
-        <label for="image">Image</label>
-        <input type="file" id="image" name="image" placeholder="Images.." class="form-control" ngModel multiple
-          accept="image/png, .jpeg, .jpg, image/gif" autofocus required>
-        <button class="btn btn-primary submit-btn">Submit</button>
+        <div class='four-elements'>
+          <div class='two-elements'>
+            <label for="brand">Brand</label>
+            <input type="text" class="form-control" id="brand" name="brand" required ngModel>
+          </div>
+          <div *ngIf ="categoryList" class='two-elements'>
+            <label class="after-element" for="category">Category</label>
+            <select name="category" id="category" class="form-control" required ngModel>
+              <option *ngFor="let data of categoryList| async;trackBy:trackById;" value="{{data.name}}" >{{data.name}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class='four-elements'>
+          <div class='two-elements'>
+            <label for="price">Price(₹)</label>
+            <input type="number" id="price" name="price" class="form-control" ngModel required>
+          </div>
+          <div class='two-elements'>
+            <label class="after-element" for="discount">Discount(%)</label>
+            <input type="number" id="discount" name="discount" class="form-control" ngModel
+              required>
+          </div>
+
+        </div>
+        <div class='four-elements'>
+          <div class='two-elements'>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" class="form-control" ngModel
+              required>
+          </div>
+          <div *ngIf ="[colors]" class='two-elements'>
+            <label class="after-element" for="color">Color</label>
+            <select name="color" id="color" class="form-control color-select box" required ngModel>
+              <option *ngFor="let color of colors" value="{{color}}" [ngStyle]="{'background-color':color}">&nbsp;&nbsp;</option>
+            </select>
+          </div>
+          <div class='two-elements'>
+            <label class="after-element" for="size">Size</label>
+            <input type="number" id="size" name="size" class="form-control" ngModel required>
+          </div>
+        </div>
+
+        <div class='two-elements'>
+          <label for="image">Image</label>
+          <input type="file" id="image" name="image" class="form-control" ngModel multiple
+            accept="image/png, .jpeg, .jpg, image/gif" autofocus required>
+        </div>
+        <div class='two-elements'>
+          <label for="thumbnailImage">ThumbnailImage</label>
+          <input type="file" id="thumbnailImage" name="image" class="form-control"
+            ngModel multiple accept="image/png, .jpeg, .jpg, image/gif" autofocus required>
+        </div>
+
+        <div class='modal-buttons'>
+          <button class="btn btn-primary">Submit</button>
+          <button class="btn btn-secondary" >Cancel</button>
+        </div>
       </form>
     </ng-template>
   </li>
 </ul>
 
-<div [ngbNavOutlet]="nav" class="body"></div>
+<div [ngbNavOutlet]="productForm" class="body"></div>

@@ -1,24 +1,10 @@
 @import "../../../variables.scss";
 
-.header {
+.form-modal {
     background-color: $modal-header-color;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     padding-top: 0.5rem;
-
-    .nav-link {
-        display: block;
-        position: relative;
-        background: none;
-        border: 1px solid transparent;
-        font-weight: 500;
-        padding: 0.75rem 1.25rem;
-        color: $primary-grey;
-
-        i {
-            margin-right: 0.5rem;
-        }
-    }
 
     .active {
         color: $primary-red;
@@ -49,18 +35,28 @@
     width: 100%;
 }
 
-.items {
-    flex-direction: row;
+.four-elements {
     display: flex;
-    input {
-        width: 32%;
-        height: 2rem;
-    }
-    .label-2 {
-        padding-left: 3rem;
-    }
+    justify-content: space-between;
     label {
         padding-right: 1rem;
-        padding-top: 0.25rem;
+    }
+    .after-element {
+        padding-left: 1rem;
     }
 }
+.two-elements {
+    flex-direction: row;
+    display: flex;
+    label {
+        padding-right: 1rem;
+    }
+}
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.color-select{
+    width: 4rem;
+}
+

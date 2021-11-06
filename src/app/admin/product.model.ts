@@ -15,10 +15,15 @@ export interface Product {
 }
 
 export enum Color {
-  BLACK, BLUE, GREEN, PINK, RED, WHITE, YELLOW
+  'black', 'blue', 'green', 'pink', 'red', 'white', 'yellow'
 }
 
 export interface Record {
   name: string;
   info: string[];
+}
+
+export interface Category {
+  id: number;
+  name: string;
 }
