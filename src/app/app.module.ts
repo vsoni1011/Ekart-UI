@@ -12,13 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { CatalogService } from './catalog/catalog.service';
+import { FilterComponent } from './catalog/filter/filter.component';
 import { ProductCardComponent } from './catalog/productCard/productCard.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
 import { TopbarComponent } from './header/topbar/topbar.component';
 import { LoginComponent } from './login/login.component';
-import { FilterComponent } from './catalog/filter/filter.component';
 
 @NgModule({
   declarations: [

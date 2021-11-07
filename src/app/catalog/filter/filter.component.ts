@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { NouisliderComponent } from 'ng2-nouislider';
+
 import { Brand, Category, Color, Size, SubCategory } from '../catalog.model';
 import { CatalogService } from '../catalog.service';
-import { ViewEncapsulation } from '@angular/core';
-import { NouisliderComponent } from 'ng2-nouislider';
 
 @Component({
   selector: 'catalog-filter',
@@ -23,6 +23,7 @@ export class FilterComponent implements OnInit {
   sizeSearchText: string = '';
   rangeSlider: number[] = [100, 3000];
   colors = Color;
+  // tslint:disable-next-line: no-any
   rangeSliderConfig: any = {
     behaviour: 'drag',
     connect: true,
@@ -61,7 +62,7 @@ export class FilterComponent implements OnInit {
   }
 
   search(event: Event): void {
-    const input = (<HTMLInputElement>event.target).value;
+    const input = (event.target as HTMLInputElement).value;
     this.subcategories = this.allsubcategories.filter((data) => data.name.toLowerCase().includes(input));
   }
 
@@ -71,14 +72,14 @@ export class FilterComponent implements OnInit {
   }
 
   updateSliderRange(data: number[]) {
-    this.rangeSlider = data
+    this.rangeSlider = data;
   }
 
   bindRangeSliderInput(event: Event, index: number, refElement: NouisliderComponent) {
-    const input = parseInt((<HTMLInputElement>event.target).value);
-    if (index == 1 && input > this.rangeSliderConfig.range.max) {
-      this.rangeSlider[index] = parseInt(this.rangeSliderConfig.range.max);
-    } else if (index == 0 && input > this.rangeSlider[1]){
+    const input = parseInt((event.target as HTMLInputElement).value, 10);
+    if (index === 1 && input > this.rangeSliderConfig.range.max) {
+      this.rangeSlider[index] = parseInt(this.rangeSliderConfig.range.max, 10);
+    } else if (index === 0 && input > this.rangeSlider[1]){
       this.rangeSlider[0] = input;
       this.rangeSlider[1] = input;
     } else {
@@ -88,17 +89,17 @@ export class FilterComponent implements OnInit {
   }
 
   searchBrands(event: Event) {
-    const input = (<HTMLInputElement>event.target).value;
-    this.brands = this.allbrands.filter((data) => data.name.toLowerCase().includes(input));    
+    const input = (event.target as HTMLInputElement).value;
+    this.brands = this.allbrands.filter((data) => data.name.toLowerCase().includes(input));
   }
 
   searchSizes(event: Event) {
-    const input = (<HTMLInputElement>event.target).value;
-    this.sizes = this.allsizes.filter((data) => data.size.toLowerCase().includes(input));    
+    const input = (event.target as HTMLInputElement).value;
+    this.sizes = this.allsizes.filter((data) => data.size.toLowerCase().includes(input));
   }
 
-  getColors() : Array<string> {
-    var keys = Object.keys(this.colors);
+  getColors(): string[] {
+    const keys = Object.keys(this.colors);
     return  keys.slice(keys.length / 2);
   }
 }
