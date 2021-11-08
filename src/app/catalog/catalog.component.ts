@@ -21,7 +21,10 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line
+  trackById(index: number, data: any) {
+    return data.id;
+  }
   changeDisplayView(value: string): void {
     this.gridView = value === 'grid';
   }
