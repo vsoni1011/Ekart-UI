@@ -15,7 +15,7 @@ export interface Product {
 }
 
 export enum Color {
-  'black', 'blue', 'green', 'pink', 'red', 'white', 'yellow'
+  BLACK, BLUE, GREEN, PINK, Red, WHITE, YELLOW
 }
 
 export interface Record {
