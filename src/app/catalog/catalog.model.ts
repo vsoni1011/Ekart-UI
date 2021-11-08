@@ -1,6 +1,9 @@
-export interface ProductCard {
+export interface Record {
   id: number;
   name: string;
+}
+
+export interface ProductCard extends Record {
   price: number;
   discount: number;
   thumbnailImage: File;
@@ -19,17 +22,14 @@ export interface Size {
   size: string;
 }
 
-export interface Category {
-  id: number;
-  name: string;
+// tslint:disable-next-line
+export interface Category extends Record {
 }
 
-export interface SubCategory {
-  id: number;
-  name: string;
+// tslint:disable-next-line
+export interface SubCategory extends Record {
 }
 
-export interface Brand {
-  id: number;
-  name: string;
+// tslint:disable-next-line
+export interface Brand extends Record {
 }

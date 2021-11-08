@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NouisliderComponent } from 'ng2-nouislider';
 
-import { Brand, Category, Color, Size, SubCategory } from '../catalog.model';
+import { Brand, Category, Color, Record, Size, SubCategory } from '../catalog.model';
 import { CatalogService } from '../catalog.service';
 
 @Component({
@@ -40,7 +40,14 @@ export class FilterComponent implements OnInit {
     }
   };
 
+  // tslint:disable-next-line
+  trackByIdentity = (index: number, item: any) => item;
+
   constructor(private catalogService: CatalogService) {
+
+  }
+
+  ngOnInit(): void {
     this.catalogService.getAllCategories().subscribe((data) => {
       this.categories = data;
       this.allsubcategories = data;
@@ -56,9 +63,6 @@ export class FilterComponent implements OnInit {
       this.allsizes = data;
       this.sizes = this.allsizes;
     });
-  }
-
-  ngOnInit(): void {
   }
 
   search(event: Event): void {
