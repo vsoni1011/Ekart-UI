@@ -20,6 +20,9 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
 import { TopbarComponent } from './header/topbar/topbar.component';
 import { LoginComponent } from './login/login.component';
+import { MatchPasswordDirective } from './shared/directives/match-password.directive';
+import { MobileNumberValidatorDirective } from './shared/directives/mobile-number-validator.directive';
+import { PasswordValidatorDirective } from './shared/directives/password-validator.directive';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { LoginComponent } from './login/login.component';
     ProductManagementComponent,
     ProductFormComponent,
     FilterComponent,
-    QuickViewComponent
+    QuickViewComponent,
+    PasswordValidatorDirective,
+    MatchPasswordDirective,
+    MobileNumberValidatorDirective
   ],
   imports: [
     BrowserModule,
