@@ -14,7 +14,9 @@ export class ProductFormComponent implements OnInit {
   categoryList: Observable<Category[]>;
   colors: Color;
 
-  constructor() { }
+  constructor(private adminService: AdminService) {
+    this.categoryList = this.adminService.getCategories();
+  }
 
   ngOnInit(): void {
   }
